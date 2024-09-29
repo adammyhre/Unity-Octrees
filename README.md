@@ -6,6 +6,6 @@ Octrees in Unity offer an efficient way to optimize large 3D spaces, and in this
 
 ## YouTube
 
-- [Using Octrees and A* for Efficient Pathfinding](#)
+- [Using Octrees and A* for Efficient Pathfinding](https://youtu.be/gNmPmWR2vV4)
 
 You can also check out my [YouTube channel](https://www.youtube.com/@git-amend?sub_confirmation=1) for more Unity content.

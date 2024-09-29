@@ -65,6 +65,7 @@ namespace Octrees {
             Gizmos.color = Color.green;
             Gizmos.DrawWireCube(bounds.center, bounds.size);
 
+            // Optional color in red the objects that intersect with the bounds
             // foreach (OctreeObject obj in objects) {
             //     if (obj.Intersects(bounds)) {
             //         Gizmos.color = Color.red;

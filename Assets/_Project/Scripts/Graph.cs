@@ -56,7 +56,7 @@ namespace Octrees {
             return pathList[index].octreeNode;
         }
         
-        int maxIterations = 10000;
+        const int maxIterations = 10000;
 
         public bool AStar(OctreeNode startNode, OctreeNode endNode) {
             pathList.Clear();
@@ -80,7 +80,7 @@ namespace Octrees {
 
             while (openSet.Count > 0) {
                 if (++iterationCount > maxIterations) {
-                    // Debug.LogError("A* exceeded maximum iterations.");
+                    Debug.LogError("A* exceeded maximum iterations.");
                     return false;
                 }
                 
@@ -99,7 +99,6 @@ namespace Octrees {
                     
                     if (closedSet.Contains(neighbor)) continue;
                     
-                    // float tentative_gScore = current.g + (current.octreeNode.bounds.center - neighbor.octreeNode.bounds.center).sqrMagnitude;
                     float tentative_gScore = current.g + Heuristic(current, neighbor);
 
                     if (tentative_gScore < neighbor.g || !openSet.Contains(neighbor)) {
@@ -112,7 +111,6 @@ namespace Octrees {
                 }
             }
             
-            // Debug.Log("No path found.");
             return false;
         }
 
